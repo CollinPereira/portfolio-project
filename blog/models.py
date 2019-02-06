@@ -13,3 +13,7 @@ class Blog(models.Model):
     def summary(self):
         sum=self.body[:100]
         return sum
+
+    def pub_date_pretty(self):
+        date=self.pub_date.strftime("%d %B, %Y")
+        return date    

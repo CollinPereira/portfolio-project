@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    {% load staticfiles%}
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
@@ -38,8 +39,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="#">Resume</a>
+                    <a class="nav-item nav-link active" href="{% url 'home'%}">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" target="_blank" href="{% static 'Resume.pdf'%}">Resume</a>
                     <a class="nav-item nav-link" href="{% url 'allblogs'%}">Blog</a>
                     <a class="nav-item nav-link" href="#">Contact</a>
 
@@ -55,10 +56,12 @@
                 <h1 class="jumbotron-heading">Hi, i'm Collin</h1>
                 <p class="lead text-muted">This is a portfolio website that where you can see all my projects, download
                     my resume, read my blog and contact me .</p>
+                    <img src="{% static 'professor.jpg'%}" alt="">
                 <p>
                     <a href="#" class="btn btn-primary my-2">Send E-mail</a>
 
                 </p>
+               
             </div>
         </section>
 
